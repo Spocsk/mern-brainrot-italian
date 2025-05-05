@@ -13,7 +13,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/assets", express.static("assets"));
 app.get("/", (req: Request, res: Response) => {
-  res.send("API en cours d'exécution");
+  res.send({
+    message: "Bienvenue sur l'API du quizz !",
+    state: "ok",
+  });
 });
 app.use("/api/quiz", quizRoutes);
 
