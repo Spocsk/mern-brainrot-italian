@@ -1,9 +1,9 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import Question from "../models/Question";
 
 const router = express.Router();
 
-router.get("/questions/:count", async (req, res) => {
+router.get("/questions/:count", async (req: Request, res: Response) => {
   try {
     const count = parseInt(req.params.count, 10);
     const questions = await Question.aggregate([
