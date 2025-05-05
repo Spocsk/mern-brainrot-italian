@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "dev": "npx tsx src/server.ts",
-    "seed": "ts-node src/seeders/quizz.seeders.ts"
+    "seed": "ts-node src/seeders/quizz.seeders.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "cors": "^2.8.5",
